@@ -6,7 +6,7 @@ A deep learning project that classifies chest X-ray images as **NORMAL** or **PN
 
 Built as the final project for **CSCI 167 – Introduction to Deep Learning** (Dr. David Ruby, Fall 2024).
 
----
+
 
 ## Why this project
 
@@ -19,7 +19,7 @@ Pneumonia is a leading cause of illness and death worldwide, and chest X-rays ar
 - Use preprocessing, data augmentation and class balancing to make the model robust and limit overfitting
 - Compare a CNN trained from scratch with a pre-trained VGG16 model
 
----
+
 
 ## Dataset
 
@@ -38,7 +38,7 @@ Original source: Kermany, D., Zhang, K., Goldbaum, M. (2018). *Labeled Optical C
 
 The training data is **imbalanced**: pneumonia images outnumber normal images about 3 to 1. Class weights (`{0: 1.945, 1: 0.673}`) were tested to counter this.
 
----
+
 
 ## Project Pipeline
 
@@ -84,7 +84,7 @@ Real-time augmentation with Keras `ImageDataGenerator`:
 - Optimizer: Adam · Loss: binary cross-entropy
 - Early stopping on validation loss
 
----
+
 
 ## Results
 
@@ -116,7 +116,7 @@ Real-time augmentation with Keras `ImageDataGenerator`:
 - Kernel size 3 vs 5 made no meaningful difference on this dataset
 - **SGD with Nesterov momentum** gave the best result (93.75%, loss 0.1969)
 
----
+
 
 ## Tech Stack
 
@@ -127,7 +127,7 @@ Real-time augmentation with Keras `ImageDataGenerator`:
 - **scikit-learn** for the confusion matrix and metrics
 - **Google Colab** (GPU) and **KaggleHub** for the dataset
 
----
+
 
 ## How to Run
 
@@ -136,7 +136,7 @@ Real-time augmentation with Keras `ImageDataGenerator`:
 3. Get your own Kaggle API token: Kaggle → **Settings → API → Create New Token**. This downloads `kaggle.json`.
 4. Run the notebook cells in order. When prompted, upload your `kaggle.json`. The dataset (~2.3 GB) downloads automatically through `kagglehub`.
 
----
+
 
 ## Repository Contents
 
@@ -147,7 +147,7 @@ Real-time augmentation with Keras `ImageDataGenerator`:
 | `Final PPT 167.pptx` | Project presentation slides |
 | `Hyperparameters.docx` | Hyperparameter experiments and observations |
 
----
+
 
 ## Future Work
 
@@ -158,4 +158,4 @@ Real-time augmentation with Keras `ImageDataGenerator`:
 - Add **Grad-CAM** heatmaps to show which lung regions drive each prediction
 - Evaluate on a larger, held-out test set
 
----
+
